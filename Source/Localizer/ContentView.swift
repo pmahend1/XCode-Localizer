@@ -123,7 +123,7 @@ struct ContentView: View {
 func generateLocalization(input: String) -> (strings: String, code: String) {
    let camelCase = input.camelCased
 
-   let string1 = "\"\(input)\" = \"\(camelCase)\";"
+   let string1 = "\"\(camelCase)\" = \"\(input)\";"
    let string2 = "static let \(camelCase) = String(localized: \"\(camelCase)\", comment: \"\(input)\")"
 
    return (string1, string2)
